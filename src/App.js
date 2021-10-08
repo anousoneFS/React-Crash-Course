@@ -3,6 +3,10 @@ import "./App.css"
 import Navbar from "./Navbar"
 import Input from "./Input"
 import Post from "./Post"
+import Category from "./Category"
+import ResponsiveGrid from "./Demo"
+import { Route, Switch } from "react-router-dom"
+import Products from "./Products"
 
 let id = 0
 function App() {
@@ -20,17 +24,41 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div>
             <Navbar name="Facebook2" />
-            <Input addPost={addPost} />
-            {posts.map((post) => (
-                <Post
-                    key={post.id}
-                    deletePost={deletePost}
-                    title={post.title}
-                    id={post.id}
-                />
-            ))}
+            <Switch>
+                <Route exact path="/">
+                    <div className="App">
+                        <ResponsiveGrid />
+                        <Input addPost={addPost} />
+                        {posts.map((post) => (
+                            <Post
+                                key={post.id}
+                                deletePost={deletePost}
+                                title={post.title}
+                                id={post.id}
+                            />
+                        ))}
+                    </div>
+                </Route>
+                <Route path="/product">
+                    <Products />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route path="/category">
+                    <Category />
+                </Route>
+            </Switch>
+        </div>
+    )
+}
+
+function About() {
+    return (
+        <div>
+            <h2> this is About page</h2>
         </div>
     )
 }

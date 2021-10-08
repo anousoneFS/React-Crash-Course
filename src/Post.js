@@ -6,7 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete"
 
 function Post({ title, id, deletePost }) {
     return (
-        <Container maxWidth="md" className="Post">
+        <Container maxWidth="sm" className="Post">
             <Button
                 variant="outlined"
                 startIcon={<DeleteIcon />}

@@ -18,7 +18,7 @@ function Input({ addPost }) {
     }
 
     return (
-        <Container maxWidth="md" fixed className="Input">
+        <Container maxWidth="sm" fixed className="Input">
             <div className="Input__header">Create Post</div>
             <input
                 className="Input__field"

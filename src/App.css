@@ -63,3 +63,15 @@ body {
     cursor: pointer;
     float: right;
 }
+
+.Demo {
+    background: hsl(216, 8%, 88%);
+    border: 1px solid hsl(216, 8%, 50%);
+    border-radius: 9px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.Link__nav {
+    margin: 0;
+}
