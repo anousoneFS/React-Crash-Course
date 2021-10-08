@@ -7,6 +7,7 @@ import Category from "./Category"
 import ResponsiveGrid from "./Demo"
 import { Route, Switch } from "react-router-dom"
 import Products from "./Products"
+import Fetchapi from "./FetchApi"
 
 let id = 0
 function App() {
@@ -58,7 +59,7 @@ function App() {
 function About() {
     return (
         <div>
-            <h2> this is About page</h2>
+            <Fetchapi />
         </div>
     )
 }

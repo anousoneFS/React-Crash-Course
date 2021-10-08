@@ -4,11 +4,11 @@ import Container from "@mui/material/Container"
 
 const Product = ({ data }) => {
     const { productId } = useParams()
-    console.log("product id = ", productId)
+    // console.log("product id = ", productId)
     const product = data.find((e) => e.id === Number(productId))
-    let content
+    let detail
     if (product) {
-        content = (
+        detail = (
             <div>
                 <h2>{product.name}</h2>
                 <p>{product.description}</p>
@@ -16,7 +16,7 @@ const Product = ({ data }) => {
             </div>
         )
     } else {
-        content = (
+        detail = (
             <div>
                 <h3>sorry does't have product detail</h3>
             </div>
@@ -24,7 +24,7 @@ const Product = ({ data }) => {
     }
     return (
         <Container>
-            <h2>{content}</h2>
+            <h2>{detail}</h2>
         </Container>
     )
 }

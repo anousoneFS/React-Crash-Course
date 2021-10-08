@@ -47,7 +47,7 @@ const Products = ({ match }) => {
             <Route path={`${url}/:productId`}>
                 <Product data={productData} />
             </Route>
-            <Route path={`${url}`} exact>
+            <Route path={url} exact>
                 <div>
                     <h2>Pleas select item</h2>
                 </div>
